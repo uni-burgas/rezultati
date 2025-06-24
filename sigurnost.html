@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>Сигурност</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      border-bottom: 1px solid #ccc;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .nav-btn {
+      border: 2px solid #aaa;
+      border-bottom: none;
+      padding: 10px 20px;
+      background-color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .content {
+      display: flex;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .box {
+      flex: 1;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: white;
+    }
+
+    .box h2 {
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f4f4f4;
+    }
+
+    .form-group .password-icon {
+      float: right;
+      margin-right: 10px;
+      margin-top: -30px;
+      position: relative;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>Здравейте, Миглена</header>
+
+<nav>
+    <a class="nav-btn" href="rezultati.html">Кандидатури</a>
+    <a class="nav-btn" href="lichni-danni.html">Лични данни</a>
+    <a class="nav-btn" href="sigurnost.html">Сигурност</a>
+</nav>
+
+<div class="content">
+  <!-- Смяна на имейл -->
+  <div class="box">
+    <h2>Смяна на Имейл</h2>
+    <div class="form-group">
+      <label>Парола</label>
+      <input type="password" placeholder="Парола">
+      <span class="password-icon">👁️</span>
+    </div>
+    <div class="form-group">
+      <label>Нов имейл</label>
+      <input type="email" placeholder="Въведете нов имейл">
+    </div>
+  </div>
+
+  <!-- Смяна на парола -->
+  <div class="box">
+    <h2>Смяна на парола</h2>
+    <div class="form-group">
+      <label>Стара парола</label>
+      <input type="password" placeholder="Стара парола">
+      <span class="password-icon">👁️</span>
+    </div>
+    <div class="form-group">
+      <label>Нова парола</label>
+      <input type="password" placeholder="Въведете нова парола">
+      <span class="password-icon">👁️</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
