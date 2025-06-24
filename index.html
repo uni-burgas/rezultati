@@ -99,10 +99,14 @@
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
 
-    if (email && password) {
-      window.location.href = "rezultati.html";
-    } else {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!email || !password) {
       alert("Моля, попълнете и имейл, и парола.");
+    } else if (!emailPattern.test(email)) {
+      alert("Моля, въведете валиден имейл адрес.");
+    } else {
+      window.location.href = "rezultati.html";
     }
   });
 </script>
