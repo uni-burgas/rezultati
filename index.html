@@ -6,6 +6,9 @@
 <title>Кандидатстудентска система</title>
 <style>
     body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f1f3f6;
@@ -90,6 +93,7 @@
 </style>
 </head>
 <body>
+<div class="wrapper" style="flex: 1;">
 <div style="position: absolute; top: 10px; left: 10px;">
 <img alt="BFU Logo" src="logo.png" style="height: 60px;"/>
 </div>
@@ -119,5 +123,11 @@
     }
   });
 </script>
-</div></body>
+</div>
+</div>
+<footer style="background-color: #222; color: #fff; text-align: center; padding: 20px 10px; font-size: 0.9em; border-top: 4px solid #005f99; margin-top: 40px;">
+    © 2025 Всички права запазени. Университет "Проф. д-р Асен Златаров" - Бургас
+</footer>
+
+</body>
 </html>
