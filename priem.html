@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>Прием</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      display: flex;
+      background-color: #e0e0e0;
+      padding: 10px;
+      border-bottom: 2px solid #ccc;
+    }
+    .navbar button {
+      margin-right: 10px;
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+    .header {
+      background: linear-gradient(to right, #007ba7, #00c3ff);
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .content {
+      padding: 20px;
+    }
+    .diploma-section {
+      margin-bottom: 20px;
+    }
+    .diploma-section input {
+      padding: 5px;
+      font-size: 14px;
+    }
+    .wish-section select, .wish-section button {
+      margin-right: 10px;
+      padding: 6px;
+      font-size: 14px;
+    }
+    .section-title {
+      font-weight: bold;
+      color: #007bff;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    .table-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 500px;
+      background-color: white;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 6px 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      background-color: #ccc;
+      border-radius: 20px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: 0.4s;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+    input:checked + .slider:before {
+      transform: translateX(20px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <button>Прием</button>
+    <button onclick="location.href='profil.html'">Профил</button>
+    <button onclick="location.href='rezultati.html'">Резултати</button>
+    <button onclick="location.href='vuprosi.html'">Въпроси</button>
+    
+  </div>
+
+  <div class="header">
+    УНИВЕРСИТЕТ "ПРОФ. Д-Р АСЕН ЗЛАТАРОВ" - БУРГАС
+  </div>
+
+  <div class="content">
+    <div class="diploma-section">
+      <label for="diploma">Диплома №</label>
+      <input type="text" id="diploma" value="12345">
+    </div>
+
+    <div class="wish-section">
+      <div class="section-title">Желания</div>
+      <button>+</button>
+      <button>-</button>
+      <select>
+        <option>- Избор на ОКС -</option>
+      </select>
+      <select>
+        <option>- Форма на обучение -</option>
+      </select>
+      <select>
+        <option>- Избор на специалност -</option>
+      </select>
+    </div>
+
+    <div class="table-container">
+      <div>
+        <div class="section-title">Кандидатстване с конкурс</div>
+        <table>
+          <thead>
+            <tr><th>Предмети</th><th>Дата</th><th>Цена</th><th>Избор</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Предварителен изпит по Химия - Специалност Медицина</td><td>29.03.2025</td><td></td><td><label class="switch"><input type="checkbox"><span class="slider"></span></label></td></tr>
+            <tr><td>Предварителен изпит по Биология - Специалност Медицина</td><td>29.03.2025</td><td></td><td><label class="switch"><input type="checkbox"><span class="slider"></span></label></td></tr>
+            <tr><td>Предварителен изпит по Биология - Обществено здраве</td><td>26.04.2025</td><td></td><td><label class="switch"><input type="checkbox"><span class="slider"></span></label></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+        <div class="section-title">Кандидатстване с ДЗИ</div>
+        <table>
+          <thead>
+            <tr><th>Предмети</th><th>Оценка</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Химия</td><td></td></tr>
+            <tr><td>Математика</td><td></td></tr>
+            <tr><td>История</td><td></td></tr>
+            <tr><td>География</td><td></td></tr>
+            <tr><td>Български език и литература</td><td></td></tr>
+            <tr><td>Биология</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+        <div class="section-title">Оценки от диплома</div>
+        <table>
+          <thead>
+            <tr><th>Предмети</th><th>Оценка</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Химия</td><td></td></tr>
+            <tr><td>Математика</td><td></td></tr>
+            <tr><td>История</td><td></td></tr>
+            <tr><td>География</td><td></td></tr>
+            <tr><td>Български език и литература (ДЗИ)</td><td></td></tr>
+            <tr><td>Биология</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

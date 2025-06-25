@@ -1,129 +1,122 @@
+
 <!DOCTYPE html>
 <html lang="bg">
 <head>
     <meta charset="UTF-8">
-    <title>Оценки</title>
+    <title>Резултати</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
             margin: 0;
-            padding: 0;
         }
-
-        header {
-            background-color: #fff;
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
+        .navbar {
+            display: flex;
+            background-color: #f1f1f1;
             border-bottom: 1px solid #ccc;
         }
-
-        nav {
+        .navbar a {
+            padding: 14px 20px;
+            display: inline-block;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-right: 1px solid #ccc;
+        }
+        .navbar a.active {
+            background-color: #cce0f5;
+            border-bottom: 2px solid #0000cc;
+        }
+        .header {
             display: flex;
-            gap: 20px;
+            align-items: center;
+            background: linear-gradient(to right, #005f99, #00d4ff);
+            color: white;
+            padding: 10px 20px;
+        }
+        .header img {
+            height: 60px;
+            margin-right: 20px;
+        }
+        .container {
             padding: 20px;
         }
-
-        .nav-btn {
-            border: 2px solid #aaa;
-            border-bottom: none;
-            padding: 10px 20px;
-            background-color: white;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 8px 8px 0 0;
+        h3 {
+            margin-top: 30px;
         }
-
-        .container {
-            background-color: white;
-            padding: 30px;
-            max-width: 800px;
-            margin: 20px auto;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: #333;
-        }
-
-        .button {
-            border: 1px solid #c44;
-            background-color: #fff0f0;
-            color: #c44;
-            padding: 5px 10px;
-            float: right;
-            margin-top: -30px;
-        }
-
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 30px;
+            margin-bottom: 30px;
         }
-
         th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
+            border: 1px solid #ddd;
+            padding: 8px;
         }
-
-        .bold {
+        th {
+            background-color: #f9f9f9;
+            text-align: left;
+        }
+        .section-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .classification {
+            color: #993300;
             font-weight: bold;
         }
-
-        .vertical-text {
-            writing-mode: vertical-rl;
-            transform: rotate(180deg);
-            position: absolute;
-            left: 0;
-            top: 30%;
-            font-size: 14px;
-            color: gray;
+        .classification.waiting {
+            font-weight: normal;
+            color: black;
         }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <a href="priem.html">Прием</a>
+        <a href="profil.html" href="profil.html">Профил</a>
+        <a class="active" href="rezultati.html">Резултати</a>
+        <a href="vuprosi.html">Въпроси</a>
+    </div>
+    <div class="header">
+        <img src="logo.png" alt="BTU Logo">
+        <h1>УНИВЕРСИТЕТ "ПРОФ. Д-Р АСЕН ЗЛАТАРОВ" - БУРГАС</h1>
+		
+    </div>
+    <div class="container">
+        <div class="section-title" style="color:#993300;">&#9660; Предварителни изпити</div>
+        <table>
+            <thead>
+                <tr><th>Изпит</th><th>Оценка</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Биология</td><td>4.05</td></tr>
+                <tr><td>Химия</td><td>4.38</td></tr>
+            </tbody>
+        </table>
 
-<header>Здравейте, Миглена</header>
+        <div class="section-title" style="color:#3399cc;">Редовни изпити</div>
+        <table>
+            <thead>
+                <tr><th>Изпит</th><th>Оценка</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td></td></tr>
+            </tbody>
+        </table>
 
-<nav>
-    <a class="nav-btn" href="rezultati.html">Кандидатури</a>
-    <a class="nav-btn" href="lichni-danni.html">Лични данни</a>
-    <a class="nav-btn" href="sigurnost.html">Сигурност</a>
-</nav>
+        <div class="classification">&#9660; I - во класиране</div>
+        <div class="classification waiting">Очаквайте класиране.</div>
 
-<div class="vertical-text"></div>
+        <div class="classification">&#9660; II - ро класиране</div>
+        <div class="classification waiting">Очаквайте класиране.</div>
 
-<div class="container">
-    <h2>БУРГАСКИ ДЪРЖАВЕН УНИВЕРСИТЕТ „ПРОФ. Д-Р АСЕН ЗЛАТАРОВ“</h2>
-    <p class="bold">Изпити</p>
+        <div class="classification">&#9660; III - то класиране</div>
+        <div class="classification waiting">Очаквайте класиране.</div>
 
-    <button class="button">Предварителни изпити</button>
-
-    <h3>Избрани изпити</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Предмет</th>
-                <th>Входящ номер</th>
-                <th>Оценка</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="bold">Биология</td>
-                <td>114775</td>
-                <td>Добър 4.05</td>
-            </tr>
-            <tr>
-                <td class="bold">Химия</td>
-                <td>114775</td>
-                <td>Добър 4.38</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
+        <div class="classification">&#9660; Класиране - платена форма</div>
+        <div class="classification waiting">Очаквайте класиране.</div>
+    </div>
 </body>
 </html>

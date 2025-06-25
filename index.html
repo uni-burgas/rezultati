@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="bg">
 <head>
-  <meta charset="UTF-8">
-  <title>Кандидатстудентска система</title>
-  <style>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta charset="utf-8"/>
+<title>Кандидатстудентска система</title>
+<style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -72,28 +73,36 @@
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-  </style>
+  
+    @media (max-width: 480px) {
+      .login-box {
+        width: 90%;
+        padding: 20px;
+      }
+      .login-box input,
+      .login-box button {
+        width: 100%;
+      }
+      .flags img {
+        width: 100%;
+      }
+    }
+</style>
 </head>
 <body>
-
 <div style="position: absolute; top: 10px; left: 10px;">
-    <img src="BTU_LOGO.png" alt="BFU Logo" style="height: 60px;">
+<img alt="BFU Logo" src="logo.png" style="height: 60px;"/>
 </div>
-   
 <header>
   БУРГАСКИ ДЪРЖАВЕН УНИВЕРСИТЕТ "ПРОФ. Д-Р АСЕН ЗЛАТАРОВ"
 </header>
-
 <div class="container">
-  <div class="login-box">
-    <div class="login-title">Кандидатстудентска система</div>
-    <input type="text" id="email" placeholder="Имейл">
-    <input type="password" id="password" placeholder="Парола">
-    <button id="loginBtn">🔐 Вход</button>
-  </div>
-
-
-
+<div class="login-box">
+<div class="login-title">Кандидатстудентска система</div>
+<input id="email" placeholder="Имейл" type="text"/>
+<input id="password" placeholder="Парола" type="password"/>
+<button id="loginBtn">🔐 Вход</button>
+<div><a href="#" style="display:block; margin-top:15px; color:#1976d2; text-decoration:none;">Забравена парола?</a></div></div>
 <script>
   document.getElementById("loginBtn").addEventListener("click", function () {
     const email = document.getElementById("email").value.trim();
@@ -110,6 +119,5 @@
     }
   });
 </script>
-
-</body>
+</div></body>
 </html>
